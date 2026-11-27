@@ -839,7 +839,7 @@ window.claude = { use: async () => null };
   let draft = null, docRef = null, assets = null;
   let slides = [], idx = 0, timer = null;
 
-  const FILES = {"2a7275b7533687f08869467d5001617c": "assets/fond.png", "8ce82fce41213a9469d728c2b7d858d7": "assets/musique.mp3", "fb90bd9224c101a9a13334d43c397164": "assets/discord.png", "f988d39ff80ba9b9a8342b2e5de9cf14": "assets/tiktok.png"};
+  const FILES = {"2a7275b7533687f08869467d5001617c": "assets/assets/fond.png.png", "8ce82fce41213a9469d728c2b7d858d7": "assets/assets/musique.mp3.mp3", "fb90bd9224c101a9a13334d43c397164": "assets/assets/discord.png.png", "f988d39ff80ba9b9a8342b2e5de9cf14": "assets/assets/tiktok.png.png"};
   const urlOf = id => FILES[id] || ("assets/" + id);
 
   function toast(msg){ const t=$("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),2600); }
