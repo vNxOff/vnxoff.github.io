@@ -1323,7 +1323,7 @@ window.claude = { use: async () => null };
   })();
 
   // ---------- Compteur de vues ----------
-  const BASE_VIEWS = 3243;
+  const BASE_VIEWS = 3243; (async()=>{try{let last=0;try{last=+sessionStorage.getItem("vnx_last")||0}catch(e){}const hit=Date.now()-last>5000;const r=await fetch("https://abacus.jasoncameron.dev/"+(hit?"hit":"get")+"/vnxoff-github-io/views");if(!r.ok)return;const j=await r.json();if(hit){try{sessionStorage.setItem("vnx_last",String(Date.now()))}catch(e){}}const n=BASE_VIEWS+(+j.value||0);$("vCount").textContent=n.toLocaleString("fr-FR");$("views").classList.add("on")}catch(e){}})();
   (async () => {
     try {
       const db = await claude.use("db");
